@@ -4,6 +4,11 @@ Game::Game(int _maxNumber)
 {
     std::cout << "Constructing new game object with maxNumber = " << _maxNumber << std::endl;
     maxNumber = _maxNumber;
+    std::srand(std::time(0));
+    randomNumber = std::rand() % (maxNumber+1);
+    playerGuess = 0;
+    numOfGuesses = 0;
+    std::cout << "Guess a number between 1-" << maxNumber << std::endl;
 }
 
 Game::~Game()
@@ -13,13 +18,6 @@ Game::~Game()
 
 void Game::play()
 {
-    std::srand(std::time(0));
-    randomNumber = std::rand() % (maxNumber+1);
-    playerGuess = 0;
-    numOfGuesses = 0;
-
-    std::cout << "Guess a number between 1-" << maxNumber << std::endl;
-
     while (true)
     {
         std::cout << "Please input a guess: ";
