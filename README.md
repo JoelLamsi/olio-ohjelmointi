@@ -1,6 +1,6 @@
 # Olio-ohjelmointi ja Oliopohjainen suunnittelu -kurssin viikkotehtävät
 
-## Tehtävä 1 - Arvauspeli (funktionaalinen toteutus)
+## Tehtävä 1 - Arvauspeli (Funktionaalinen toteutus)
 
 Ohjelman toiminta:
 
@@ -19,7 +19,7 @@ Tehtävä 1 muokkaus siten että se on toteutettu oliopohjaisesti käyttäen Gam
   - `randomNumber`: Pelin arpoma luku.
   - `numOfGuesses`: Pelaajan arvausten määrä.
 - **Luokan funktiot**:
-  - **Konstruktori**: Alustaa peli-olion määrittäen pelaajan syötetyllä äsuurimman arvottaman luvun.
+  - **Konstruktori**: Alustaa peli-olion satunnaislukugeneraattorin aikaleiman mukaan. Määrittää pelaajan syötetyllä suurimman arvottaman luvun (`maxNumber`). Lisäksi alustaa muuttujat `playerGuess` ja `numOfGuesses`.
   - **Destruktori**: Poistaa `Game`-olion.
   - **`void play()`**: Pelin toteutus, missä käyttäjää pyydetään arvaamaan luku, ja vertaillaan tätä oikean kanssa.
   - **`void printGameResult()`**: Yksityinen funktio, joka tulostaa oikean luvun ja pelaajan arvausten määrä.
