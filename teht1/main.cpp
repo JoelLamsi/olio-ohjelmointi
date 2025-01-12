@@ -5,14 +5,14 @@
 int game(int maxnum)
 {
     std::srand(std::time(0));
-    int randomNumber = std::rand() % (maxnum + 1);
+    int randomNumber = (std::rand() % maxnum) + 1;
 
     int guess = 0;
     int attempts = 0;
 
     std::cout << "Guess a number between 1-" << maxnum << std::endl;
 
-    while(true)
+    while(guess != randomNumber)
     {
         std::cout << "Please input your guess: ";
         std::cin >> guess;
@@ -26,7 +26,6 @@ int game(int maxnum)
             std::cout << "The correct number is lower" << std::endl;
         } else {
             std::cout << "Correct! " << randomNumber << " was the right number." << std::endl;
-            break;
         }
     }
 
