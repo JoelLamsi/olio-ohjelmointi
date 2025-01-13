@@ -23,3 +23,24 @@ Tehtävä 1 muokkaus siten että se on toteutettu oliopohjaisesti käyttäen Gam
   - **Destruktori**: Poistaa `Game`-olion.
   - **`void play()`**: Pelin toteutus, missä käyttäjää pyydetään arvaamaan luku, ja vertaillaan tätä oikean kanssa.
   - **`void printGameResult()`**: Yksityinen funktio, joka tulostaa oikean luvun ja pelaajan arvausten määrä.
+
+## Tehtävä 3 - Italialainen kokki
+
+Tässä tehtävässä harjoitellaan oliooiden perimisen käyttöä.
+
+Projekti koostuu kahdesta luokasta:
+- `Chef`: Pääluokka yleisen kokin toiminnalle
+- `ItalianChef`: `Chef`-luokasta peritty aliluokka, joka lisää toiminnan kuten pizzan valmistuksen.
+
+**Ohjelman Toiminta**
+1. `Chef`-luokka
+   - `makeSalad(int)`: Laskee annettujen raaka-aineiden määrän perusteella, montako salaattia voidaan valmistaa.
+   - `makeSoup(int)`: Laskee annettujen raaka-aineiden määrän perusteella, montako keittoa voidaan valmistaa.
+2. `ItalianChef` -luokka
+   - Perii `Chef`-luokan ominaisuudet ja toiminnot.
+   - `askSecret(string, int, int)`:
+     - Tarkistaa salasanan ("pizza").
+     - Jos salasana on oikea, kutsuu `makePizza`-funktiota.
+     - Jos salasana on väärä, ei kutsu `makePizza`-funktiota.
+   - `makePizza(int, int)`:
+     - Laskee jauhojen ja veden perusteella, montako pizzaa voidaan valmistaa.
