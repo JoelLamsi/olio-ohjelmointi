@@ -44,3 +44,17 @@ Projekti koostuu kahdesta luokasta:
      - Jos salasana on väärä, ei kutsu `makePizza`-funktiota.
    - `makePizza(int, int)`:
      - Laskee jauhojen ja veden perusteella, montako pizzaa voidaan valmistaa.
+
+## Tehtävä 4 - Pankkiohjelma
+
+Tässä ohjelmassa simuloidaan pankin toimintaa ja asiakassuhteiden hallintaa. Ohjelma hyödyntää **koosteolioita** (composite objects), joissa monimutkaiset oliot koostuvat useista yksinkertaisemmista olioista.
+
+Ohjelma sisältää luokat:
+  - `Pankki`: Sisältää kolme asiakasta ja hallinnoi pankin toimintoja, kuten talletuksia ja nostoja.
+  - `Asiakas`: Koostuu käyttötilistä ja luottotilistä. Tämä on esimerkki yhdistelmäoliosta, joka yhdistää kaksi erillistä tiliä yhdeksi asiakkaan näkökulmasta.
+  - `Pankkitili`: Perusluokka, joka tarjoaa toiminnallisuuden tilin saldojen hallintaan.
+  - `Luottotili`: Perii `Pankkitili`-luokan ja lisää luottorajoihin liittyvät ominaisuudet.
+
+Ohjelman toiminnallisuus
+  - **Talletukset ja nostot**: Käyttäjät voivat tehdä talleetuksia ja nostoja sekä käyttö- että luottotileille.
+  - **Pankin varat**: Lasketaan asiakkaiden käyttötilien saldojen ja luottosaldojen perusteella.
