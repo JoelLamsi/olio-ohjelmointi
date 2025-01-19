@@ -23,3 +23,38 @@ Tehtävä 1 muokkaus siten että se on toteutettu oliopohjaisesti käyttäen Gam
   - **Destruktori**: Poistaa `Game`-olion.
   - **`void play()`**: Pelin toteutus, missä käyttäjää pyydetään arvaamaan luku, ja vertaillaan tätä oikean kanssa.
   - **`void printGameResult()`**: Yksityinen funktio, joka tulostaa oikean luvun ja pelaajan arvausten määrä.
+
+## Tehtävä 3 - Italialainen kokki
+
+Tässä tehtävässä harjoitellaan oliooiden perimisen käyttöä.
+
+Projekti koostuu kahdesta luokasta:
+- `Chef`: Pääluokka yleisen kokin toiminnalle
+- `ItalianChef`: `Chef`-luokasta peritty aliluokka, joka lisää toiminnan kuten pizzan valmistuksen.
+
+**Ohjelman Toiminta**
+1. `Chef`-luokka
+   - `makeSalad(int)`: Laskee annettujen raaka-aineiden määrän perusteella, montako salaattia voidaan valmistaa.
+   - `makeSoup(int)`: Laskee annettujen raaka-aineiden määrän perusteella, montako keittoa voidaan valmistaa.
+2. `ItalianChef` -luokka
+   - Perii `Chef`-luokan ominaisuudet ja toiminnot.
+   - `askSecret(string, int, int)`:
+     - Tarkistaa salasanan ("pizza").
+     - Jos salasana on oikea, kutsuu `makePizza`-funktiota.
+     - Jos salasana on väärä, ei kutsu `makePizza`-funktiota.
+   - `makePizza(int, int)`:
+     - Laskee jauhojen ja veden perusteella, montako pizzaa voidaan valmistaa.
+
+## Tehtävä 4 - Pankkiohjelma
+
+Tässä ohjelmassa simuloidaan pankin toimintaa ja asiakassuhteiden hallintaa. Ohjelma hyödyntää **koosteolioita** (composite objects), joissa monimutkaiset oliot koostuvat useista yksinkertaisemmista olioista.
+
+Ohjelma sisältää luokat:
+  - `Pankki`: Sisältää kolme asiakasta ja hallinnoi pankin toimintoja, kuten talletuksia ja nostoja.
+  - `Asiakas`: Koostuu käyttötilistä ja luottotilistä. Tämä on esimerkki yhdistelmäoliosta, joka yhdistää kaksi erillistä tiliä yhdeksi asiakkaan näkökulmasta.
+  - `Pankkitili`: Perusluokka, joka tarjoaa toiminnallisuuden tilin saldojen hallintaan.
+  - `Luottotili`: Perii `Pankkitili`-luokan ja lisää luottorajoihin liittyvät ominaisuudet.
+
+Ohjelman toiminnallisuus
+  - **Talletukset ja nostot**: Käyttäjät voivat tehdä talleetuksia ja nostoja sekä käyttö- että luottotileille.
+  - **Pankin varat**: Lasketaan asiakkaiden käyttötilien saldojen ja luottosaldojen perusteella.
