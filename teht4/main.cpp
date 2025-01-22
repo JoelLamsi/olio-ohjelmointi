@@ -27,5 +27,8 @@ int main()
 
     pankki.tiliTalletus("Charlie", 2513);
     cout << "=> Pankin varat: " << pankki.getVarat() << endl;
+
+    pankki.luotonMaksu("Alice", 500);
+    cout << "=> Pankin varat: " << pankki.getVarat() << endl;
     return 0;
 }

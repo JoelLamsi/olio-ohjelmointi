@@ -20,7 +20,7 @@ double Pankkitili::withdraw(double amount)
 {
     if (amount > this->saldo && amount <= 0)
     {
-        cout << "VIRHE: Nosto tililtä ei onnistunut" << endl;
+        cout << "VIRHE: Nosto tililta ei onnistunut" << endl;
         return -1;
     } else {
         this->saldo -= amount;

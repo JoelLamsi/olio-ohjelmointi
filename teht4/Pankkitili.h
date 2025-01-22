@@ -7,8 +7,8 @@ class Pankkitili
 public:
     Pankkitili(string);
     double getBalance();
-    void deposit(double);
-    double withdraw(double);
+    virtual void deposit(double);
+    virtual double withdraw(double);
 protected:
     string omistaja;
     double saldo = 0;

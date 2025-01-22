@@ -5,10 +5,10 @@ class Luottotili : public Pankkitili
 {
 public:
     Luottotili(string, double);
-    void deposit(double);
-    double withdraw(double);
+    void deposit(double) override;
+    double withdraw(double) override;
 protected:
-    double luottoraja = 0;
+    double luottoraja;
 };
 
 #endif // LUOTTOTILI_H
