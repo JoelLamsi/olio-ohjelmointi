@@ -7,6 +7,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->lineEdit_num1->setText("0");
+    ui->lineEdit_num2->setText("0");
+    ui->lineEdit_result->setText("0");
+
     QList<QPushButton*> digitButtons =
     {
         ui->pushButton_n0, ui->pushButton_n1, ui->pushButton_n2, ui->pushButton_n3,
@@ -48,8 +52,10 @@ void MainWindow::digitClicked()
 
     if (editingNumber1)
     {
+        if (ui->lineEdit_num1->text() == "0") ui->lineEdit_num1->clear();
         ui->lineEdit_num1->setText(ui->lineEdit_num1->text() + digit);
     } else {
+        if (ui->lineEdit_num2->text() == "0") ui->lineEdit_num2->clear();
         ui->lineEdit_num2->setText(ui->lineEdit_num2->text() + digit);
     }
 }
@@ -93,8 +99,9 @@ void MainWindow::enterClicked()
         } else {
             ui->lineEdit_result->setText("Virhe");
         }
-        ui->lineEdit_num1->clear();
-        ui->lineEdit_num2->clear();
+        ui->lineEdit_num1->setText("0");
+        ui->lineEdit_num2->setText("0");
+        result = 0;
         currentOperation = "+";
         editingNumber1 = true;
     }
@@ -102,8 +109,8 @@ void MainWindow::enterClicked()
 
 void MainWindow::clearClicked()
 {
-    ui->lineEdit_num1->clear();
-    ui->lineEdit_num2->clear();
-    ui->lineEdit_result->clear();
+    ui->lineEdit_num1->setText("0");
+    ui->lineEdit_num2->setText("0");
+    ui->lineEdit_result->setText("0");
     editingNumber1 = true;
 }
